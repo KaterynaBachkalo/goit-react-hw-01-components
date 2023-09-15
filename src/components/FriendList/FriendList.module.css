@@ -15,29 +15,33 @@
 }
 
 .friendList {
-    width: 360px;
     display: flex;
     flex-direction: column;
-    margin: 80px auto;
     align-items: center;
     justify-content: center;
     gap: 30px;
+
+    margin: 80px auto;
+    padding: 0;
+    width: 360px;
 }
 
 .item {
-    width: 100%;
-    padding: 20px;
-    list-style: none;
     display: flex;
     align-items: center;
     gap: 20px;
+
+    width: 100%;
+    list-style: none;
+    padding: 20px;
+
     background-color: #FFFFFF;
     border-radius: 15px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .name {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .avatar {
