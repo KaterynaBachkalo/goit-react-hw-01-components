@@ -1,14 +1,14 @@
 import { Profile } from 'components/Profile/Profile';
-import userJson from './user.json';
+import userJson from './Data/user.json';
 
 import { Statistics } from './components/Statistics/Statistics';
-import dataJson from './data.json';
+import dataJson from './Data/data.json';
 
 import { FriendList } from './components/FriendList/FriendList';
-import friendsJson from './friends.json';
+import friendsJson from './Data/friends.json';
 
 import { TransactionHistory } from './components/TransactionHistory/TransactionHistory';
-import transactionsJson from './transactions.json';
+import transactionsJson from './Data/transactions.json';
 
 export const App = props => {
   return (
@@ -20,9 +20,6 @@ export const App = props => {
           location={userJson.location}
           avatar={userJson.avatar}
           stats={userJson.stats}
-          followers={userJson.stats.followers}
-          views={userJson.stats.views}
-          likes={userJson.stats.likes}
         />
       </div>
 

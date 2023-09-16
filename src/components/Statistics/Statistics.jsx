@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const Statistics = ({ title, stats }) => {
   return (
     <section className={cssStatistics.statistics}>
-      {title && <h2 className={cssStatistics.title}>Upload stats</h2>}
+      {title && <h2 className={cssStatistics.title}>{title}</h2>}
 
       <ul className={cssStatistics.statList}>
         {stats.map(({ label, percentage, id }) => {
@@ -31,8 +31,8 @@ Statistics.propTypes = {
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
       id: PropTypes.string.isRequired,
-    })
-  ),
+    }).isRequired
+  ).isRequired,
 };
 
 function getRandomHexColor() {

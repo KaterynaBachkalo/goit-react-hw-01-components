@@ -1,4 +1,4 @@
-import css from './Profile.module.css';
+import cssProfile from './Profile.module.css';
 import PropTypes from 'prop-types';
 
 export const Profile = ({
@@ -9,26 +9,26 @@ export const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img src={avatar} alt={username} className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
+    <div className={cssProfile.profile}>
+      <div className={cssProfile.description}>
+        <img src={avatar} alt={username} className={cssProfile.avatar} />
+        <p className={cssProfile.name}>{username}</p>
+        <p className={cssProfile.tag}>@{tag}</p>
+        <p className={cssProfile.location}>{location}</p>
       </div>
 
-      <ul className={css.stats}>
-        <li className={css.item}>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{followers}</span>
+      <ul className={cssProfile.stats}>
+        <li className={cssProfile.item}>
+          <span className={cssProfile.label}>Followers</span>
+          <span className={cssProfile.quantity}>{followers}</span>
         </li>
-        <li className={css.item}>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>{views}</span>
+        <li className={cssProfile.item}>
+          <span className={cssProfile.label}>Views</span>
+          <span className={cssProfile.quantity}>{views}</span>
         </li>
-        <li className={css.item}>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{likes}</span>
+        <li className={cssProfile.item}>
+          <span className={cssProfile.label}>Likes</span>
+          <span className={cssProfile.quantity}>{likes}</span>
         </li>
       </ul>
     </div>
@@ -40,7 +40,9 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };
